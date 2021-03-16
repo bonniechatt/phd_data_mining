@@ -43,6 +43,11 @@ all.male.dat <- all.male.dat[, !duplicated(colnames(all.male.dat))]
 mbc.ht <- all.male.dat
 summary(mbc.ht)
 
+#setting gene names as row names for the merged dataset
+n <- mbc.ht
+mbc.ht <- mbc.ht[-1]
+rownames(mbc.ht) <- n$GeneNames
+
 #returning table of missing values in each patient
 mis.val.num <- md.pattern(mbc.ht)
 
