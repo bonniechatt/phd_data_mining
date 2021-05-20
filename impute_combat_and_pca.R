@@ -29,6 +29,8 @@ pca.contrib.top20.imputed <- fviz_pca_ind(res.pca.imputed,
                                   title = 'PCA Plot of Imputed Data') +
   scale_color_gradient2(low="forestgreen", mid="goldenrod",
                         high="firebrick4", midpoint=4)
+
+pca.contrib.top20.imputed
                         
 #running PCA on native dataset
 res.pca.native <- PCA(native.data.combat)
@@ -42,3 +44,5 @@ pca.contrib.top20.native <- fviz_pca_ind(res.pca.native,
                                   title = 'PCA Plot of Native Data') +
   scale_color_gradient2(low="forestgreen", mid="goldenrod",
                         high="firebrick4", midpoint=4)
+
+pca.contrib.top20.native
